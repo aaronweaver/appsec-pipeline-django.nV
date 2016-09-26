@@ -19,11 +19,10 @@ before_install:
 
 after_success:
   ## Run the SRC:CLR Scan
-  - curl -sSL https://download.sourceclear.com/ci.sh | bash
+  #- curl -sSL https://download.sourceclear.com/ci.sh | bash
   ## Run Bandit python static code
   - bandit -r * -x tests
   ## Run Docker Bench for Security
-  - git clone https://github.com/docker/docker-bench-security.git
   - cd docker-bench-security
   - sh docker-bench-security.sh
 
