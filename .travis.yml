@@ -15,7 +15,7 @@ before_install:
   ## Docker Build
   - docker build -t pipeline/django .
   - docker run -i -t --name django-nV -p 8000:8000  pipeline/django sh /django.nV/docker-startup.sh
-  - sh tests/python-sec.sh
+  - bash tests/python-sec.sh
 
 after_success:
   ## Run the SRC:CLR Scan
