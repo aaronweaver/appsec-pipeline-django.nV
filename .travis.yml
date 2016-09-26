@@ -14,7 +14,7 @@ before_script:
 before_install:
   ## Docker Build
   - docker build -t pipeline/django .
-  - docker run -i -t --name django-nV -p 8000:8000  pipeline/django /django.nV/docker-startup.sh
+  - docker run -i -t --name django-nV -p 8000:8000  pipeline/django sh /django.nV/docker-startup.sh
   - sh tests/python-sec.sh
 
 after_success:
