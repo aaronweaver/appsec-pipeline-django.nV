@@ -14,7 +14,7 @@ docker build -t vulnapp/djangonV .
 Launch the docker container.
 
 ```
-docker run -i -t --name django-nV -p 8000:8000  vulnapp/djangonV /django.nV/docker-startup.sh
+docker run -i -t --name django-nV -p 8000:8000  vulnapp/djangonV sh /django.nV/docker-startup.sh
 ```
 
 You should then be able to access the web interface at `http://localhost:8000/`.
