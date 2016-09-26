@@ -21,12 +21,10 @@ after_success:
   ## Run the SRC:CLR Scan
   #- curl -sSL https://download.sourceclear.com/ci.sh | bash
   ## Run Bandit python static code
-  - bandit -r * -x tests
+  - bandit -r /django.nV/* -x tests
   ## Run Docker Bench for Security
   - cd docker-bench-security
   - sh docker-bench-security.sh
-
-script:
 
 addons:
   firefox: "45.0"
